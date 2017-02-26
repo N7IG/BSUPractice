@@ -1,0 +1,407 @@
+body {
+	margin: 0;
+	height: 100%;
+	min-width: 600px;
+	position: relative;
+}
+
+h1 {
+	margin: 0;
+	float: left;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+}
+
+.header {
+	background: #262829;
+	height: 40px;
+	padding-left: 30px;
+	padding-right: 25px;
+	box-shadow: 0 0 20px;
+	color: #FFFFFF;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.logo {
+	height: 38px;
+	float: left;
+	margin-right: 6px;
+	margin-left:  6px;
+}
+
+.header .left {
+	font-size: 29px;
+}
+
+.log_in_icon {
+	height: 34px;
+	float: right;
+	margin-right: 3px; 
+	margin-left: 3px;
+	cursor: pointer;
+	
+}
+
+.log_in_text {
+	float: right;
+	line-height: 35px;
+	font-size: 22px; 
+	cursor: pointer;
+
+}
+
+.add_icon {
+	height: 30px;
+	float: right;
+	margin-right: 15px; 
+	margin-left: 3px;
+	margin-top: 3px;
+	cursor: pointer;
+}
+
+.footer {
+	height: 25px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	line-height: 35px;
+	font-size: 14px;
+}
+
+.foot_info {
+	background: #EFEFF4;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	border: 0px;
+	text-align: center;
+	height: 30px;
+}
+
+.filter_box {
+	background: #EFEFF4;
+	position: absolute;
+	/* maybe fixed */
+	width: 250px;
+	height: 350px;
+	margin-left: 15px;
+	margin-top: 20px;
+	padding: 10px;
+	/*box-shadow: 0 0 5px;*/
+	border: solid 2px #CBCACF;
+}
+
+.filter_title {
+	font-size: 20px;
+	margin-left: 6px;
+	color: #007EFC;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.date {
+	margin: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	height: 80px;
+}
+
+
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+
+.checkbox + label {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:not(checked) + label {
+  position: relative; 
+  padding: 0 0 0 60px; 
+}
+
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+
+.checkbox:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: all .2s; 
+}
+
+.checkbox:checked + label:before {
+  background: #4AD762;
+}
+.checkbox:checked + label:after {
+  left: 26px;
+}
+
+.date_block {
+	margin-left: 75px;
+}
+
+.left {
+	float: left;
+}
+
+.from_text {
+	margin-top: 12px;
+	text-align: right;
+}
+
+.to_text {
+	margin-top: 14px;
+}
+
+input[type="text"] {
+	float: right;
+	border-radius: 6px;
+	margin-top: 9px;
+	outline: none;
+	padding-left: 3px;
+	height: 20px;
+}
+
+input[type="text"]:focus {
+  color: #000000;
+  border: 2px solid #3879D9
+}
+
+.date_input {
+	width: 100px;
+}
+
+.author_input {
+	width: 145px;
+}
+
+.author {
+	margin: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.tag {
+	margin: 20px;
+	margin-top: 48px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.tag_input {
+	width: 145px;
+}
+
+.filter_button {
+	position: relative;
+}
+
+.f_button {
+	position: absolute;
+	top: 45px;
+	right: 20px;
+	height: 32px;
+	width: 110px;
+	padding: 4px;
+	border-radius:  5px;
+	border-color: #4CDA64;
+	background: #4CDA64;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+
+.f_button:hover {
+	background: #45c65b;
+
+}
+
+.f_button:active {
+background-color: #27496d;
+text-shadow: -1px 1px #193047;
+}
+
+
+
+.news {
+	position: absolute;
+	left: 280px;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+.news_title {
+	max-width: 600px;
+	margin-top: 0;
+	cursor: pointer;
+}
+
+.news_block{
+	max-width: 800px;
+	min-width: 700px;
+	margin-bottom: 50px;
+}
+
+.upper {
+	position: relative;
+}
+
+.news_text {
+	min-height: 150px;
+	text-indent: 2em
+}
+
+
+
+.news_img {
+	height: 150px;
+	margin-right: 20px;
+    border-radius: 8px;
+    float: left;
+    cursor: pointer;
+}
+
+
+.news_opt {
+	height: 16px;
+	float: right;
+	margin-right: 3px; 
+	margin-left: 3px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+
+.news_info {
+	position: absolute;
+	top: 5px;
+	right: 0;
+	margin-top: 0px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	color: #666666;
+	padding-top: 0px;
+}
+
+.newsdate {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	color: #666666;
+	font-size: 14px;
+	float: right;
+}
+
+.downtags {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	color: #cccccc;
+	font-size: 14px;
+}
+
+hr {
+	margin-bottom: 0px;
+
+}
+
+
+
+.pager {
+	text-align: center;
+	border-radius: 6px;
+	margin: auto;
+	margin-bottom: 45px;
+	color: #0079FF;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+}
+.page_icon {
+
+	display: inline-block;
+	padding: 3px;
+	margin: 0;
+
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 2px solid #0079FF;
+	cursor: pointer;
+}
+
+.page_icon_l {
+	vertical-align: top;
+	display: inline-block;
+	border: 2px solid #0079FF;
+	padding: 3px;
+	padding-left: 15px;
+	margin: 0;
+	padding-right: 15px;
+	border-radius: 6px 0 0 6px;
+	cursor: pointer;
+}
+
+.page_icon_r {
+
+	vertical-align: top;
+	display: inline-block;
+	padding: 3px;
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 2px solid #0079FF;
+	border-radius: 0 6px 6px 0;
+	cursor: pointer;
+}
+
+.page_selected {
+	background: #0079FF;
+	display: inline-block;
+	color: white;
+	padding: 3px;
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 2px solid #0079FF;
+	cursor: pointer;
+}
+
+.pager_t {
+	display: inline-block;
+	border-collapse: collapse;
+	text-align: center;
+	border-radius: 6px;
+	margin: auto;
+	border: none;
+}
+
+.p_table {
+	border: 2px solid #0079FF;
+	padding: 3px;
+	height: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.lr_table {
+	padding: 3px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
