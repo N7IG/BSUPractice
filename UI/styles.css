@@ -57,6 +57,7 @@ h1 {
 	margin-left: 3px;
 	margin-top: 3px;
 	cursor: pointer;
+
 }
 
 .footer {
@@ -76,6 +77,7 @@ h1 {
 	border: 0px;
 	text-align: center;
 	height: 30px;
+	border-radius: 6px;
 }
 
 .filter_box {
@@ -254,20 +256,17 @@ text-shadow: -1px 1px #193047;
 }
 
 .news_title {
-	max-width: 600px;
 	margin-top: 0;
 	cursor: pointer;
 }
 
 .news_block{
 	max-width: 800px;
-	min-width: 700px;
+	/*min-width: 700px;*/
+	margin-right: 30px;
 	margin-bottom: 50px;
 }
 
-.upper {
-	position: relative;
-}
 
 .news_text {
 	min-height: 150px;
@@ -296,20 +295,24 @@ text-shadow: -1px 1px #193047;
 
 
 .news_info {
-	position: absolute;
-	top: 5px;
-	right: 0;
 	margin-top: 0px;
+	margin-bottom: 3px;
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 	color: #666666;
 	padding-top: 0px;
+	width: 100%;
+	border-radius: 6px;
+	border: 2px solid #0079FF;
+	table-layout: auto;
 }
 
 .newsdate {
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-	color: #666666;
-	font-size: 14px;
-	float: right;
+    color: #666666;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 6px;
+    text-align: left;
 }
 
 .downtags {
@@ -346,6 +349,10 @@ hr {
 	cursor: pointer;
 }
 
+.page_icon:hover{
+	background: #d3e8ff;
+}
+
 .page_icon_l {
 	vertical-align: top;
 	display: inline-block;
@@ -356,6 +363,14 @@ hr {
 	padding-right: 15px;
 	border-radius: 6px 0 0 6px;
 	cursor: pointer;
+}
+
+.page_icon_l:hover{
+	background: #d3e8ff;
+}
+
+.page_icon_r:hover{
+	background: #d3e8ff;
 }
 
 .page_icon_r {
@@ -404,4 +419,15 @@ hr {
 	padding: 3px;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+
+.news_bar {
+	height: 24px;
+	border-radius: 6px;
+	border: 2px solid #0079FF;
+}
+
+.bar_r {
+	width: 1%;
 }
