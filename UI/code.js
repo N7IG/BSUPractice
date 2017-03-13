@@ -1,14 +1,19 @@
+
+tagArray = ["тэг", "космос", "SpaceX", "МКС", "новость", "мир", "интересное", "DDOS"];
+
 var articles = [
   {
    id: '1',
+   tags: ["тэг", "космос", "SpaceX", "МКС"],
    title: 'Корабль Dragon пристыковался к МКС с опозданием на сутки',
    summary: 'Запущенный вместе с ракетой Falcon 9 космический грузовик Dragon американской компании SpaceX прибыл к Международной космической станции (МКС) на день позже запланированной даты.',
    createdAt: new Date('March 06, 2017 22:58:00'),
-    author: 'admino',
-    content: '19 февраля ракета-носитель Falcon 9 с космическим кораблем Dragon стартовала с мыса Канаверал для доставки груза на МКС. На борту корабля находится багаж для обеспечения жизнедеятельности команды космической станции, а также оборудование для проведения научных экспериментов. Среди прочего Dragon должен доставить на МКС для опытов супербактерию, особенность которой заключается в устойчивости к действию антибиотиков.'
+   author: 'admino',
+   content: '19 февраля ракета-носитель Falcon 9 с космическим кораблем Dragon стартовала с мыса Канаверал для доставки груза на МКС. На борту корабля находится багаж для обеспечения жизнедеятельности команды космической станции, а также оборудование для проведения научных экспериментов. Среди прочего Dragon должен доставить на МКС для опытов супербактерию, особенность которой заключается в устойчивости к действию антибиотиков.'
   },
   {
     id: '2',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'Мобильный интернет velcom работал со сбоями из-за DDOS-атаки',
     summary: 'Абоненты velcom в соцсетях пожаловались на проблемы в работе мобильного интернета. В компании подтвердили: на сети оператора произошла DDOS-атака.',
     createdAt: new Date('March 06, 2017 22:59:00'),
@@ -17,6 +22,7 @@ var articles = [
   },
   {
     id: '3',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'Возвращение BlackBerry: представлен QWERTY-смартфон KEYone',
     summary: 'АВ декабре прошлого года BlackBerry продала все права на выпуск смартфонов китайской TCL. В преддверии старта выставки MWC 2017 нам представили первое детище возрождаемого бренда — BlackBerry KEYone.',
     createdAt: new Date('March 06, 2017 23:06:00'),
@@ -25,14 +31,16 @@ var articles = [
   },
   {
     id: '4',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'В выходные земляне увидят солнечное затмение',
     summary: '26 февраля в некоторых районах Земли получится наблюдать кольцеобразное солнечное затмение. Правда, территорию Беларуси астрономическое явление обойдет стороной.',
     createdAt: new Date('March 06, 2017 23:07:00'),
-    author: 'admin',
+    author: 'admino',
     content: 'Лунный диск пройдет перед Солнцем. Из-за особенностей движения небесных тел спутник не заслонит звезду полностью: темный диск Луны будет окружен ослепительным «кольцом огня». Кольцеобразное затмение увидят жители южных частей Чили и Аргентины, Анголы и некоторых районов Демократической Республики Конго. Частичное затмение будет видно в Южной и Западной Африке, на юге Южной Америки и в Антарктиде'
   },
   {
    id: '5',
+   tags: ["тэг", "новость", "мир", "интересное"],
    title: 'Корабль Dragon пристыковался к МКС с опозданием на сутки',
    summary: 'Запущенный вместе с ракетой Falcon 9 космический грузовик Dragon американской компании SpaceX прибыл к Международной космической станции (МКС) на день позже запланированной даты.',
    createdAt: new Date('March 06, 2017 23:08:00'),
@@ -41,6 +49,7 @@ var articles = [
   },
   {
     id: '6',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'Мобильный интернет velcom работал со сбоями из-за DDOS-атаки',
     summary: 'Абоненты velcom в соцсетях пожаловались на проблемы в работе мобильного интернета. В компании подтвердили: на сети оператора произошла DDOS-атака.',
     createdAt: new Date('March 06, 2017 23:09:00'),
@@ -49,6 +58,7 @@ var articles = [
   },
   {
     id: '7',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'Возвращение BlackBerry: представлен QWERTY-смартфон KEYone',
     summary: 'АВ декабре прошлого года BlackBerry продала все права на выпуск смартфонов китайской TCL. В преддверии старта выставки MWC 2017 нам представили первое детище возрождаемого бренда — BlackBerry KEYone.',
     createdAt: new Date('March 06, 2017 23:10:00'),
@@ -57,6 +67,7 @@ var articles = [
   },
   {
     id: '8',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'В выходные земляне увидят солнечное затмение',
     summary: '26 февраля в некоторых районах Земли получится наблюдать кольцеобразное солнечное затмение. Правда, территорию Беларуси астрономическое явление обойдет стороной.',
     createdAt: new Date('March 06, 2017 23:11:00'),
@@ -65,6 +76,7 @@ var articles = [
   },
   {
    id: '9',
+   tags: ["тэг", "новость", "мир", "интересное"],
    title: 'Корабль Dragon пристыковался к МКС с опозданием на сутки',
    summary: 'Запущенный вместе с ракетой Falcon 9 космический грузовик Dragon американской компании SpaceX прибыл к Международной космической станции (МКС) на день позже запланированной даты.',
    createdAt: new Date('March 06, 2017 23:12:00'),
@@ -73,6 +85,7 @@ var articles = [
   },
   {
     id: '10',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'Мобильный интернет velcom работал со сбоями из-за DDOS-атаки',
     summary: 'Абоненты velcom в соцсетях пожаловались на проблемы в работе мобильного интернета. В компании подтвердили: на сети оператора произошла DDOS-атака.',
     createdAt: new Date('March 06, 2017 23:13:00'),
@@ -81,6 +94,7 @@ var articles = [
   },
   {
    id: '11',
+   tags: ["тэг", "новость", "мир", "интересное"],
    title: 'Корабль Dragon пристыковался к МКС с опозданием на сутки',
    summary: 'Запущенный вместе с ракетой Falcon 9 космический грузовик Dragon американской компании SpaceX прибыл к Международной космической станции (МКС) на день позже запланированной даты.',
    createdAt: new Date('March 06, 2017 23:14:00'),
@@ -89,6 +103,7 @@ var articles = [
   },
   {
     id: '12',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'Мобильный интернет velcom работал со сбоями из-за DDOS-атаки',
     summary: 'Абоненты velcom в соцсетях пожаловались на проблемы в работе мобильного интернета. В компании подтвердили: на сети оператора произошла DDOS-атака.',
     createdAt: new Date('March 06, 2017 23:15:00'),
@@ -97,6 +112,7 @@ var articles = [
   },
   {
     id: '13',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'Возвращение BlackBerry: представлен QWERTY-смартфон KEYone',
     summary: 'АВ декабре прошлого года BlackBerry продала все права на выпуск смартфонов китайской TCL. В преддверии старта выставки MWC 2017 нам представили первое детище возрождаемого бренда — BlackBerry KEYone.',
     createdAt: new Date('March 06, 2017 23:16:00'),
@@ -105,6 +121,7 @@ var articles = [
   },
   {
     id: '14',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'В выходные земляне увидят солнечное затмение',
     summary: '26 февраля в некоторых районах Земли получится наблюдать кольцеобразное солнечное затмение. Правда, территорию Беларуси астрономическое явление обойдет стороной.',
     createdAt: new Date('March 06, 2017 23:17:00'),
@@ -113,6 +130,7 @@ var articles = [
   },
   {
    id: '15',
+   tags: ["тэг", "новость", "мир", "интересное"],
    title: 'Корабль Dragon пристыковался к МКС с опозданием на сутки',
    summary: 'Запущенный вместе с ракетой Falcon 9 космический грузовик Dragon американской компании SpaceX прибыл к Международной космической станции (МКС) на день позже запланированной даты.',
    createdAt: new Date('March 06, 2017 23:18:00'),
@@ -121,6 +139,7 @@ var articles = [
   },
   {
     id: '16',
+    tags: ["тэг", "новость", "мир", "DDOS"],
     title: 'Мобильный интернет velcom работал со сбоями из-за DDOS-атаки',
     summary: 'Абоненты velcom в соцсетях пожаловались на проблемы в работе мобильного интернета. В компании подтвердили: на сети оператора произошла DDOS-атака.',
     createdAt: new Date('March 06, 2017 23:19:00'),
@@ -129,6 +148,7 @@ var articles = [
   },
   {
     id: '17',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'Возвращение BlackBerry: представлен QWERTY-смартфон KEYone',
     summary: 'АВ декабре прошлого года BlackBerry продала все права на выпуск смартфонов китайской TCL. В преддверии старта выставки MWC 2017 нам представили первое детище возрождаемого бренда — BlackBerry KEYone.',
     createdAt: new Date('March 06, 2017 23:20:00'),
@@ -137,6 +157,7 @@ var articles = [
   },
   {
     id: '18',
+    tags: ["тэг", "новость", "мир", "интересное"],
     title: 'В выходные земляне увидят солнечное затмение',
     summary: '26 февраля в некоторых районах Земли получится наблюдать кольцеобразное солнечное затмение. Правда, территорию Беларуси астрономическое явление обойдет стороной.',
     createdAt: new Date('March 06, 2017 23:21:00'),
@@ -145,6 +166,7 @@ var articles = [
   },
   {
    id: '19',
+   tags: ["тэг", "новость", "мир", "интересное"],
    title: 'Корабль Dragon пристыковался к МКС с опозданием на сутки',
    summary: 'Запущенный вместе с ракетой Falcon 9 космический грузовик Dragon американской компании SpaceX прибыл к Международной космической станции (МКС) на день позже запланированной даты.',
    createdAt: new Date('March 06, 2017 23:22:00'),
@@ -153,6 +175,7 @@ var articles = [
   },
   {
     id: '20',
+    tags: ["тэг", "новость", "мир", "DDOS"],
     title: 'Мобильный интернет velcom работал со сбоями из-за DDOS-атаки',
     summary: 'Абоненты velcom в соцсетях пожаловались на проблемы в работе мобильного интернета. В компании подтвердили: на сети оператора произошла DDOS-атака.',
     createdAt: new Date('March 06, 2017 23:23:00'),
@@ -161,12 +184,15 @@ var articles = [
   }
 ];
 
-function getArticles(skip, top, filterConfig)
-{
-    if (skip < 0 || skip > articles.length)
-        alert("invalid skip value");
-    if (top < skip || top > articles.length)
-        alert("invalid top value");
+function getArticles(skip, top, filterConfig){
+    if (skip < 0 || skip > articles.length || (typeof skip != "number")) {
+        console.log("invalid skip value");
+        return undefined;
+    }
+    if (top < skip || top > articles.length || (typeof top != "number")) {
+        console.log("invalid top value");
+        return undefined;
+    }
 
     skip = skip || 0;
     top = top || 10;
@@ -175,14 +201,24 @@ function getArticles(skip, top, filterConfig)
     if (filterConfig != undefined){
         var since = filterConfig.sinceDate || new Date(-1);
         var until = filterConfig.untilDate || new Date();
-        var iAuthor = filterConfig.author || "";
+        var iAuthor = filterConfig.author;
+        var iTags = filterConfig.tags || [];
+        if (iAuthor !== undefined){
         outputArticles = outputArticles.filter(function checkAuthor(value) {
             return value.author === iAuthor;
         });
+        }
         outputArticles = outputArticles.filter(function checkDate(value) {
             return value.createdAt >= since && value.createdAt <= until;
         });
-
+        outputArticles = outputArticles.filter(function checkTags(value) {
+            for (var i = 0; i < iTags.length; i++){
+              if (value.tags.indexOf(iTags[i]) === -1){
+                  return false;
+              }
+            }           
+            return true;
+        });
     }
     outputArticles = outputArticles.sort(function byDate(a, b) {
         return a.createdAt - b.createdAt;
@@ -190,33 +226,55 @@ function getArticles(skip, top, filterConfig)
     outputArticles = outputArticles.slice(skip, top + skip);
     return outputArticles;
 
-};
+}
 
-function getArticle(id)
-{
-    if (id > articles.length){
-        alert ("Нет такого id");
+function getArticle(id) {
+    if (typeof id !== "string"){
+        console.log("error");
+        return undefined;
     }
     for (var i = 0; i < articles.length; i++){
-          if (articles[i].id == id){
+          if (articles[i].id === id){
               return articles[i];
           }
     }
-};
+    console.log("error");
+    return undefined;
+}
 
 function validateArticle(article) {
     if (typeof article.id != "string" || article.id.length <= 0)
-        return false;
+      return false;
     if (typeof article.title != "string" || article.title.length > 100 || article.title.length <= 0)
-        return false;
+      return false;
     if (typeof article.summary != "string" || article.summary.length > 200 || article.summary.length <= 0)
-        return false;
+      return false;
     if (article.createdAt instanceof Date === false )
-        return false;
+      return false;
     if (typeof article.author != "string" || article.author.length <= 0)
-        return false;
+      return false;
     if (typeof article.content != "string" || article.content.length <=0)
-        return false;
+      return false;
+    if (Array.isArray(article.tags)){
+    if( article.tags.length >= 1){
+      for (var i = 0; i < article.tags.length; i++){
+
+        var contains = false;
+
+        for (var j = 0; j < tagArray.length; j++){
+          if (article.tags[i] === tagArray[j]){
+            contains = true;
+            break;
+          }
+        }
+        if (contains === false)
+          return false;
+      }
+    }
+    else return false;
+    }
+    else return false;
+
 
     return true;
 }
@@ -224,10 +282,9 @@ function validateArticle(article) {
 function addArticle(article) {
     for (var i = 0; i < articles.length; i++)
     {
-        if (articles[i].id === article.id) {
-            if (k === 1)
-                return false;
-        }
+      if (articles[i].id === article.id) {
+        return false;
+      }
     }
     if (validateArticle(article))
     {
@@ -241,19 +298,39 @@ function addArticle(article) {
 function editArticle(id, article) {
     if (getArticle(id) === undefined)
         return false;
+    iArticle = getArticle(id);
     if (validateArticle(article))
     {
-        getArticle(id).title  = article.title || getArticle(id).title;
-        getArticle(id).summary  = article.summary || getArticle(id).summary;
-        getArticle(id).content  = article.content || getArticle(id).content;
+        iArticle.title  = article.title || iArticle.title;
+        iArticle.summary  = article.summary || iArticle.summary;
+        iArticle.content  = article.content || iArticle.content;
     }
 }
 
 function removeArticle(id) {
     for (var i = 0; i < articles.length; i++)
     {
-        if (articles[i].id == id)
-            delete articles[i];
+      if (articles[i].id == id)
+        articles = articles.splice(i, 1);
     }
     
 }
+
+
+console.log(getArticles(5, 10)); //correct
+console.log(getArticles(5, 4)); //invalid top
+console.log(getArticles("incorrect_value")); //invalid skip
+console.log(getArticles(73, 5)); //invalid skip
+console.log(getArticles(5, 10,  {author: "Mr. Snow"})); //no result
+console.log(getArticles(0, 20,  {author: "admin"})); //correct
+console.log(getArticles(0, 20,  {author: "admino"})); //correct
+
+
+console.log(getArticle("5"));
+console.log(getArticle("smth")); //invalid id
+console.log(getArticle("98")); //invalid id 
+console.log(getArticle("0"));//invalid id 
+
+console.log(validateArticle(getArticle("1")));
+
+console.log(getArticles(0, 20,  {tags: ["тэг"]})); 
