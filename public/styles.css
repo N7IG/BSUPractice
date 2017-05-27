@@ -1,0 +1,804 @@
+body {
+	margin: 0;
+	height: 100%;
+	overflow: auto;
+	min-width: 600px;
+	position: relative;
+}
+
+h1 {
+	margin: 0;
+	float: left;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+}
+
+.header {
+	background: #262829;
+	height: 40px;
+	padding-left: 30px;
+	padding-right: 25px;
+	box-shadow: 0 0 20px;
+	color: #FFFFFF;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.logo {
+	height: 38px;
+	float: left;
+	margin-right: 6px;
+	margin-left:  6px;
+}
+
+.header .left {
+	font-size: 29px;
+	padding-top: 3px;
+}
+
+.log_in_icon, .log_out_icon {
+	height: 34px;
+	float: right;
+	margin-right: 3px; 
+	margin-left: 3px;
+	cursor: pointer;	
+	padding-top: 3px;
+  
+}
+
+.log_out_icon{
+	padding-top: 8px;
+    padding-left: 8px;
+	height: 25px;
+	display: none;
+	padding: 6px;
+}
+
+.log_in_text {
+	padding-top: 2px;
+	float: right;
+	line-height: 35px;
+	font-size: 22px; 
+	cursor: pointer;
+
+}
+
+.add_icon {
+	padding-top: 2px;
+	height: 30px;
+	float: right;
+	margin-right: 15px; 
+	margin-left: 3px;
+	margin-top: 3px;
+	cursor: pointer;
+	display: none;
+}
+
+/*.footer {
+	height: 25px;
+	bottom: 0;
+	width: 100%;
+	line-height: 35px;
+	font-size: 14px;
+}*/
+
+.foot_info {
+	background: #EFEFF4;
+	padding: 0;
+	width: 100%;
+	border: 0px;
+	text-align: center;
+	height: 30px;
+}
+
+
+.add_tag{
+	text-decoration: underline;
+	cursor: default;
+	margin-top: 13px;
+	color:  #707070;
+}
+
+.new_tag{
+	position: relative;
+	width: 195px;
+	margin-top: 13px;
+}
+
+.filter_box {
+	background: #EFEFF4;
+	/*float: left;*/
+	position: absolute;
+	/* maybe fixed */
+	width: 250px;
+	margin-left: 15px;
+	/*margin-top: 20px;*/
+	padding: 10px;
+	/*box-shadow: 0 0 5px;*/
+	border: solid 2px #CBCACF;
+}
+
+.filter_title {
+	font-size: 20px;
+	margin-left: 6px;
+	color: #007EFC;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.date {
+	margin: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+
+.checkbox + label {
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+
+}
+.checkbox:not(checked) + label {
+  position: relative; 
+  padding: 0 0 0 60px; 
+}
+
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+
+.checkbox:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: all .2s; 
+}
+
+.checkbox:checked + label:before {
+  background: #4AD762;  
+
+}
+.checkbox:checked + label:after {
+  left: 26px;
+}
+
+.date_block {
+	margin-left: 75px;
+}
+
+.left {
+	float: left;
+}
+
+.from_text {
+
+}
+
+.to_text {
+}
+
+.container{
+	margin-left: 35px;
+	margin-right: 35px;
+}
+
+.full_container{
+	margin: 35px;
+	margin-top: 40px;
+}
+
+.full_title{
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 23px;
+}
+
+.full_content{
+	line-height: 1.5;
+
+}
+
+.full_summary{
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.author_input{
+	float: right;
+	border-radius: 6px;
+	margin-top: 9px;
+	outline: none;
+	padding-left: 3px;
+	height: 20px;
+	background-color: white;
+	border: 2px solid #0079FF;
+}
+
+.tag_input{
+	border-radius: 6px;
+	outline: none;
+	width: 145px;
+	float: left;
+	padding-left: 3px;
+	background-color: white;
+	border: 2px solid #0079FF;
+}
+
+input[type="text"]:focus {
+  color: #000000;
+  border: 2px solid #3879D9;
+  box-shadow: 0px 0px 5px 0px #0079FF;
+}
+
+input[type="date"] {
+	border-radius: 6px;
+	width: 145px;
+	margin-left: 50px;
+	outline: none;
+	padding-left: 3px;
+	height: 20px;
+	background-color: #c6c6c6;
+	border: 2px solid #0079FF;
+}
+
+input[type="date"]:focus {
+  color: #000000;
+  border: 2px solid #3879D9;
+  box-shadow: 0px 0px 5px 0px #0079FF;
+}
+
+.date_input {
+	width: 100px;
+}
+
+.author_input {
+	width: 145px;
+	background: #c6c6c6;
+}
+
+.author {
+	margin: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.tag {
+	margin: 20px;
+	margin-top: 48px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+.filter_button {
+	position: relative;
+}
+
+.remove_tag{
+	border: navajowhite;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    right: 23px;
+    font-size: larger;
+}
+
+.remove_tag:hover{
+	color: red;
+}
+
+.submit_tag{
+	border: navajowhite;
+    background: transparent;
+    position: absolute;
+    outline: none;
+    cursor: pointer;
+    right: 20px;
+}
+
+.submit_tag:hover{
+	color: green;
+}
+
+.f_button {
+	top: 45px;
+	right: 20px;
+	height: 32px;
+	width: 110px;
+	padding: 4px;
+	border-radius:  5px;
+	border-color: #4CDA64;
+	background: #4CDA64;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	float: right;
+}
+
+.f_button:hover {
+	background: #45c65b;
+
+}
+
+.f_button:active {
+background-color: #27496d;
+text-shadow: -1px 1px #193047;
+}
+
+
+
+.news {
+	/*position: absolute;
+	left: 280px;*/
+	/*margin-left: 320px;*/
+	margin-top: 20px;
+	min-width: 1350px;
+}
+
+.news_title {
+	margin-top: 0;
+	cursor: pointer;
+}
+
+.news_block{
+	max-width: 700px;
+	/*min-width: 700px;*/
+	/*margin-right: 30px;*/
+	margin-bottom: 50px;
+	margin: auto;
+}
+
+/*.page_hood{
+	max-width: 800px;
+}*/
+
+
+.news_text {
+	min-height: 150px;
+	text-indent: 2em
+}
+
+
+
+.news_img, .full_img {
+	height: 150px;
+	margin-right: 20px;
+    border-radius: 8px;
+    float: left;
+    cursor: pointer;
+}
+
+.full_img{
+	margin-top: 0px;
+}
+
+.news_opt {
+	display: none;
+	height: 16px;
+	float: right;
+	margin-right: 3px; 
+	margin-left: 3px;
+	cursor: pointer;
+	
+}
+
+
+.news_info, .news_info_full {
+	margin-top: 0px;
+	margin-bottom: 3px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	color: #666666;
+	padding-top: 0px;
+	width: 100%;
+	border-radius: 6px;
+	border: 2px solid #0079FF;
+	table-layout: auto;
+}
+
+.news_info_full{
+	position: absolute;
+	margin-left: 35px;
+    margin-right: 35px;
+    width: 550px;
+    margin-top: 6px;
+}
+
+.newsdate {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #666666;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 6px;
+    text-align: left;
+}
+
+.downtags {
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	color: #cccccc;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+hr {
+	margin-bottom: 0px;
+
+}
+
+
+
+.pager {
+	text-align: center;
+	border-radius: 6px;
+	left: 50%;
+	height: 25px;
+	width: 150px;
+	color: white;
+	margin-bottom: 45px;
+	background-color: #007EFC;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+	font-size: 18px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+
+}
+
+.pager:hover {
+	background: #007EAA;
+
+}
+
+.pager:active {
+background-color: #27496d;
+t
+
+}
+.page_icon {
+
+	display: inline-block;
+	padding: 3px;
+	margin: 0;
+
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 2px solid #0079FF;
+	cursor: pointer;
+}
+
+.page_icon:hover{
+	background: #d3e8ff;
+}
+
+.page_icon_l {
+	vertical-align: top;
+	display: inline-block;
+	border: 2px solid #0079FF;
+	padding: 3px;
+	padding-left: 15px;
+	margin: 0;
+	padding-right: 15px;
+	border-radius: 6px 0 0 6px;
+	cursor: pointer;
+}
+
+.page_icon_l:hover{
+	background: #d3e8ff;
+}
+
+.page_icon_r:hover{
+	background: #d3e8ff;
+}
+
+.page_icon_r {
+
+	vertical-align: top;
+	display: inline-block;
+	padding: 3px;
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 2px solid #0079FF;
+	border-radius: 0 6px 6px 0;
+	cursor: pointer;
+}
+
+.page_selected {
+	background: #0079FF;
+	display: inline-block;
+	color: white;
+	padding: 3px;
+	margin: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 2px solid #0079FF;
+	cursor: pointer;
+}
+
+.pager_t {
+	display: inline-block;
+	border-collapse: collapse;
+	text-align: center;
+	border-radius: 6px;
+	margin: auto;
+	border: none;
+}
+
+.p_table {
+	border: 2px solid #0079FF;
+	padding: 3px;
+	height: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.lr_table {
+	padding: 3px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+.news_bar {
+	height: 24px;
+	border-radius: 6px;
+	border: 2px solid #0079FF;
+}
+
+.bar_r {
+	width: 1%;
+}
+
+legend{
+	margin-bottom: 5px;
+}
+
+.from_text {
+	margin: 10px;
+
+}
+
+.to_text {
+	margin: 10px;
+}
+
+select {
+	border-radius: 6px;
+	border: 2px solid #0079FF;
+	outline: none;
+	cursor: pointer;
+	background-color: white;
+}
+
+.page_wrap:after{
+	display: block;
+	content: "";
+}
+
+.footer, .page_wrap:after{
+	height: 10px;
+}
+
+.page_wrap{
+	min-height: 97%;
+	margin-bottom: -10px;
+}
+
+html{
+	height: 100%;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 15%;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 350px; /* Could be more or less, depending on screen size */
+    height: 260px;
+    padding: 10px;
+    position: relative;
+}
+
+.login_title{
+	font-size: 30px;
+	text-align: center;
+	font-weight:bold;
+	margin: 20px;
+
+}
+/* The Close Button */
+.closeadd, .closelogin, .closeedit, .closeopen {
+    /* Position it in the top right corner outside of the modal */
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#enter{
+	margin-top: 35px;
+}
+
+.loginput{
+	width: 150px;
+	border-radius: 6px;
+	margin-top: 9px;
+	outline: none;
+	padding-left: 3px;
+	height: 20px;
+	background-color: white;
+	border: 2px solid #0079FF;
+}
+
+/* Close button on hover */
+.closeadd:hover,
+.closelogin:hover,
+.closeedit:hover,
+.closeedit:focus,
+.closeopen:hover,
+.closeopen:focus,
+.closeadd:focus,
+.closelogin:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    animation: animatezoom 0.6s
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.psw_text{
+	margin: 24px;
+}
+
+.login_text{
+	margin: 30px;
+}
+
+.login_but_act {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;	
+	border-radius:  5px;
+	border-color: #4CDA64;
+	background: #4CDA64;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+	outline: none;
+}
+
+
+.add_window, .edit_window{
+    display: none;
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 5%;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.full_window{
+    display: none;
+    position: fixed;
+
+    left: 0;
+   	top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 5%;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.add_content {
+    background-color: #fefefe;
+    margin: auto; 
+    border: 1px solid #888;
+    width: 650px;
+    overflow-y: auto;
+    padding: 10px;
+    position: relative;
+}
+
+.title_input{
+	font-size: 16px;
+	resize: none;
+	width: 100%;
+	border-radius: 6px;
+	margin-top: 9px;
+	outline: none;
+	padding-left: 3px;
+	background-color: white;
+	argin-bottom: 10px;
+	border: 2px solid #0079FF;
+
+}
+
+.summary_input{
+	font-size: 16px;
+	resize: none;
+	width: 100%;
+	border-radius: 6px;
+	margin-top: 9px;
+	outline: none;
+	padding-left: 3px;
+	background-color: white;
+	border: 2px solid #0079FF;
+	margin-bottom: 10px;
+}
+
+.img_url{
+	margin-bottom: 20px;
+	font-size: 16px;
+	width: 100%;
+	border-radius: 6px;
+	margin-top: 9px;
+	outline: none;
+	padding-left: 3px;
+	background-color: white;
+	margin-bottom: 10px;
+	border: 2px solid #0079FF;
+}
+
+.add_title{
+	font-size: 30px;
+	text-align: center;
+	font-weight:bold;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "Igor Shavel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/N7IG/BSUPractice/issues"
+  },
+  "homepage": "https://github.com/N7IG/BSUPractice#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}

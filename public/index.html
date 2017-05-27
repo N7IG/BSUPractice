@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Новости : : Лента</title>
+	<link rel="shortcut icon" href="image/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="styles.css">	
+	<script src="code.js"></script>
+	<script src="dom.js"></script>
+</head>
+
+<body>
+	<div class="page_wrap">
+		<div class="header">
+		<div class="left">
+			Лента Новостей
+		</div>
+		<div class="right">
+			<img class="log_in_icon" src="image/log_in_white.png">
+			<img class="log_out_icon" src="image/logout_w.png">
+			<div class="log_in_text">Войти</div>
+			<img class="add_icon" src="image/add_round.png">
+		</div>
+		</div>
+
+		<div class="mid">
+			<div class="filter_box" >
+			<div class="filter_title">Фильтры новостей</div>
+			<div class="date">
+				<input type="checkbox" class="checkbox" id="checkbox_d" />
+				<label for="checkbox_d" onselectstart="return false" id="checkbox_d" onmousedown="return false">Дата</label>
+				<div class="from_text">
+					<legend>Начало</legend>
+					<input type="date" id="fromdate" value="" disabled="true">
+				</div>
+
+				<div class="to_text">
+					<legend>Конец </legend>
+					<input type="date" id="todate" value="" disabled="true">
+					
+				</div>
+			</div>
+			<div class="author">
+				<input type="checkbox" class="checkbox" id="checkbox_a" />
+				<label for="checkbox_a" onselectstart="return false" onmousedown="return false">Автор</label>
+				<div class="author_block">	
+						<input type="text" class="author_input" value="" disabled="true">			
+				</div>
+			</div>
+			<div class="tag">
+				<input type="checkbox" class="checkbox" id="checkbox_t" />
+				<label for="checkbox_t" onselectstart="return false" onmousedown="return false">Теги</label>
+				<div class="tag_block">	
+					<div class="add_tag" onmousedown="return false">добавить тег</div>						
+				</div>
+			</div>
+			<div class="filter_button">
+				<button class="f_button">
+				ПОИСК
+				</button>
+			</div>
+			</div>
+
+			<div class="news">
+				<div class="news-list"> </div>			
+				<div class="page_hood"><center><button class="pager">Загрузить ещё</button></center></div>
+			</div>
+	
+		</div>
+	</div>
+	<div class="footer">
+		<table class="foot_info">
+			<tr>
+				<td>Последнее изменение: 21.02.2017</td>
+				<td>Лента Новостей    (с) Игорь Шавель, 2 курс, 6 группа</td>
+				<td>связь: eagle_ig@tut.by</td>
+			</tr>
+		</table>
+	</div>
+
+
+<template id="template-article-list-item">
+        <div class="news_block" data-id="post4">
+				
+				<table class="news_info">
+					<tr>
+						<td class="newsdate">26.02.2017      15:22</td>
+						<td class="bar_r"><img class="news_opt" src="image/delete.png" id="del-but"></li></td>
+						<td class="bar_r"><img class="news_opt" src="image/edit.png" id="edit-but"></li></td>
+						<td class="bar_r"><div class="author_news">@user</div></li></td>
+					</tr>
+				</table>	
+				<div class="upper">
+					<h2 class="news_title">Title</h2>										
+				</div>
+
+				<img class="news_img" onerror="this.src='image/MACRO.jpg'" src="https://img.tyt.by/620x620s/n/it/06/1/kolceobraznoe_solnechnoe_zatmenie_2012_eclipse_reuters.jpg">
+				<div class="news_text">
+					text
+				</div>
+				<hr>
+				<div class="downtags">
+					tags
+				</div>      
+			</div>
+    </template>			
+
+    <template id="template-new-tag">
+    	<form class="new_tag" onsubmit="return false;">
+			
+			<input type="text" placeholder="тег..." value="" class="tag_input"  required="true">
+			<div class="remove_tag" onmousedown="return false">&times;</div> 			  
+		</form>
+    </template>
+
+
+
+    <div class="modal">	
+  <form class="modal-content animate" onsubmit="return false;">
+    <span class="closelogin" title="Close Modal">&times;</span>
+    <div class="container">
+       	<center class="login_title"><label > Вход</label></center>
+
+      <label class="login_text"><b>Логин</b></label>
+      <input type="text" placeholder="Имя пользователя" class="loginput" id="uname" value="admin" required>
+      <br/>
+
+      <label class="psw_text"><b>Пароль</b></label>
+      <input type="password" value="admin" placeholder="Пароль" class="loginput" id="psw" required>
+
+      <button  type="text" class="login_but_act" id="enter">Войти</button>
+    </div>
+
+  </form>
+  </div>
+
+
+  <div class="add_window" onsubmit="return false;">	
+
+  <form class="add_content animate" >
+    <span class="closeadd" title="Close Modal">&times;</span>
+    <div class="container">
+       	<center class="add_title" ><label >Добавление новости</label></center>
+
+
+      <label class="add_text"><b>Название</b></label>
+      <textarea rows="2" maxlength="100" value="" placeholder="максимум 100 символов" class="title_input"  required ></textarea>
+      <br/>
+      <label class="summary_text"><b>Изображение</b></label>
+      <input type="text" placeholder="URL" value="" class="img_url" required>
+      <br/>
+      <label class="summary_text"><b>Краткое описание</b></label>
+      <textarea rows="3" maxlength="200" value="" placeholder="максимум 200 символов" class="summary_input"  id="sum" required></textarea>
+      <br/>
+      <label class="Content_text"><b>Полный текст</b></label>
+      <textarea rows="7" class="summary_input" value="" id="content" required></textarea>
+
+      <button  type="text" class="login_but_act" id="adding">Добавить новость</button>
+    </div>
+
+  </form>
+  </div>
+
+  <div class="edit_window">	
+
+  <form class="add_content animate" onsubmit="return false;">
+    <span class="closeedit" title="Close Modal">&times;</span>
+    <div class="container">
+
+      <center class="add_title" ><label >Редактирование новости</label></center>
+
+      <label class="add_text"><b>Название</b></label>
+      <textarea rows="2" maxlength="100" value="" placeholder="максимум 100 символов" class="title_input"  required ></textarea>
+      <br/>
+      <label class="summary_text"><b>Изображение</b></label>
+      <input type="text" placeholder="URL" value="" class="img_url" required>
+      <br/>
+      <label class="summary_text"><b>Краткое описание</b></label>
+      <textarea rows="3" maxlength="200" value="" placeholder="максимум 100 символов" class="summary_input" id="sum" required></textarea>
+      <br/>
+      <label class="Content_text"><b>Полный текст</b></label>
+      <textarea rows="7" class="summary_input" value="" id="content" required></textarea>
+
+      <label class="Content_text"><b>Полный текст</b></label>
+      <textarea rows="7" class="summary_input" value="" id="content" required></textarea>
+
+      <button  type="submit" class="login_but_act" id="editing">Сохранить изменения</button>
+    </div>
+
+  </form>
+  </div>
+
+  <div class="full_window" >	
+
+  <form class="add_content animate" >
+    <span class="closeopen" title="Close Modal">&times;</span>
+    	<table class="news_info_full">
+					<tr>
+						<td class="newsdate"></td>
+						<td class="bar_r"><div class="author_news"></div></li></td>
+					</tr>
+				</table>	
+    <div class="full_container">
+
+      <div class="full_title"></div>
+      <img class="full_img" onerror="this.src='image/MACRO.jpg'" src="https://img.tyt.by/620x620s/n/it/06/1/kolceobraznoe_solnechnoe_zatmenie_2012_eclipse_reuters.jpg">
+      <div class="full_summary"> </div>
+      <br/>
+      <div class="full_content"> </div>
+      <br/>
+      <hr>
+		<div class="downtags"></div>     
+  
+    </div>
+
+  </div>
+  </div>
+
+</div>
+
+</body>
+
+</html>
