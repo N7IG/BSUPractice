@@ -142,7 +142,6 @@ var articleRenderer = (function () {
    			content: iContent
     	}
        	
-       	//localStorage.setItem("articles", newsHandler.getJsArticles());
     	if (newsHandler.addArticle(newArticle) && newsHandler.check(newArticle, f_config)){
     		insertArticleIntoList(newArticle);
     	}
